@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 nclude <limits.h>
+=======
+#include <limits.h>
+>>>>>>> 9adae6da8fd2c06ee03be250810ddcd49b3af6dc
 #include <stdio.h>
 #include "main.h"
 
