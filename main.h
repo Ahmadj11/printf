@@ -6,13 +6,9 @@
 
 /** prototypes */
 
-int _printf(const char *format, ...);
+int _printf(const char *format, ...)
 
-<<<<<<< HEAD
-=======
-int c 
-int s
-int d
-int i
-
->>>>>>> 388d77772a1b641cf4a478ef8de521939714a3d7
+int print_d(va_list)
+int print_c(va_list)
+int print_i(va_list)
+int print_s(va_list)
