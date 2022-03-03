@@ -1,5 +1,10 @@
-#include "main.h"
+#ifndef MAIN_H
+#define MAIN_H
+#include <stdlib.h>
+#include <stdarg.h>
+#include <unistd.h>
 
 /** prototypes */
 
 int _printf(const char *format, ...);
+
