@@ -4,6 +4,7 @@
 #include <stdarg.h>
 #include <unistd.h>
 
+typedef struct printf 
 /** prototypes */
 
 int _printf(const char *format, ...)
