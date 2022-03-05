@@ -8,8 +8,8 @@
  */
 static int (*_specifiers(const char *format))(va_list)
 {
-	unsigned int x;
-	print_x p[] = {
+	unsigned int a;
+	print_a p[] = {
 		{"c", print_c},
 		{"s", print_s},
 		{"i", print_i},
@@ -17,14 +17,14 @@ static int (*_specifiers(const char *format))(va_list)
 		{NULL, NULL}
 	};
 
-	for (x = 0; p[x].y != NULL; x++)
+	for (a = 0; p[a].y != NULL; a++)
 	{
-		if (*(p[x].y) == *format)
+		if (*(p[a].y) == *format)
 		{
 			break;
 		}
 	}
-	return (p[x].z);
+	return (p[a].z);
 }
 
 /**
@@ -35,37 +35,37 @@ static int (*_specifiers(const char *format))(va_list)
  */
 int _printf(const char *format, ...)
 {
-	unsigned int x = 0, count = 0;
+	unsigned int a = 0, count = 0;
 	va_list valist;
 	int (*f)(va_list);
 
 	if (format == NULL)
 		return (-1);
 	va_start(valist, format);
-	while (format[x])
+	while (format[a])
 	{
-		for (; format[x] != '%' && format[x]; x++)
+		for (; format[a] != '%' && format[a]; a++)
 		{
-			_putchar(format[x]);
+			_putchar(format[a]);
 			count++;
 		}
-		if (!format[x])
+		if (!format[a])
 			return (count);
-		f = _specifiers(&format[x + 1]);
+		f = _specifiers(&format[a + 1]);
 		if (f != NULL)
 		{
 			count += f(valist);
-			x += 2;
+			a += 2;
 			continue;
 		}
-		if (!format[x + 1])
+		if (!format[a + 1])
 			return (-1);
-		_putchar(format[x]);
+		_putchar(format[a]);
 		count++;
-		if (format[x + 1] == '%')
-			x += 2;
+		if (format[a + 1] == '%')
+			a += 2;
 		else
-			x++;
+			a++;
 	}
 	va_end(valist);
 	return (count);
