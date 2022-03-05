@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * _specifiers - checks format specifier
- * @format: format specifier being
+ * _specifiers - funtion being used
+ * @format: specifier ?
  *
- * Return: pointer to valid function or NULL
+ * Return: pointer or NULL
  */
 static int (*_specifiers(const char *format))(va_list)
 {
@@ -28,10 +28,10 @@ static int (*_specifiers(const char *format))(va_list)
 }
 
 /**
- * _printf - prints everything
- * @format: list of argument types passed
+ * _printf - function being used to print a string
+ * @format: parameters in the function used
  *
- * Return: number of characters
+ * Return: characters ?
  */
 int _printf(const char *format, ...)
 {
