@@ -2,7 +2,7 @@
 
 /**
  * _specifiers - checks format specifier
- * @format: format specifier being
+ * @format: format specifier being 
  *
  * Return: pointer to valid function or NULL
  */
