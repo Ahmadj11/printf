@@ -4,8 +4,15 @@
 #include <stdarg.h>
 #include <unistd.h>
 
+<<<<<<< HEAD
+/** prototypes */
+=======
 typedef struct printf 
 /** prototypes **/
+>>>>>>> 5b46f795eb021222c63f9c182031f8c670c5d2c4
+
+typedef struct printf 
+
 
 int _printf(const char *format, ...)
 
