@@ -3,21 +3,32 @@
 #include <stdlib.h>
 #include <stdarg.h>
 #include <unistd.h>
+#include <stdio.h>
 
-<<<<<<< HEAD
-/** prototypes */
-=======
+/**
+ * struct print - fucntion being used
+ * @a: first parameter
+ * @b: second parameter
+ */
+
+/*prototypes */
+
 typedef struct printf 
-/** prototypes **/
->>>>>>> 5b46f795eb021222c63f9c182031f8c670c5d2c4
+{
+	int (*b) (va_list);
+	char *a;
+}
 
 typedef struct printf 
 
 
 int _printf(const char *format, ...)
 
-int print_d(va_list)
-int print_c(va_list)
-int print_i(va_list)
-int print_s(va_list)
+int print_d(va_list);
+int print_c(va_list);
+int print_i(va_list);
+int print_s(va_list);
+int _putchar(char c);
+int _printf(const char *format, ...);
+
 #endif /* MAIN_H */

@@ -27,12 +27,6 @@ static int (*_specifiers(const char *format))(va_list)
 	return (p[a].z);
 }
 
-/**
- * _printf - function being used to print a string
- * @format: parameters in the function used
- *
- * Return: characters ?
- */
 int _printf(const char *format, ...)
 {
 	unsigned int a = 0, count = 0;
