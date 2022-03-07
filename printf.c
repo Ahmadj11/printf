@@ -1,16 +1,13 @@
 #include "main.h"
 
 /**
-<<<<<<< HEAD
  * _specifiers - checks format specifier
- * @format: format specifier being 
-=======
+ * @format: format specifier being used
  * _specifiers - funtion being used
  * @format: specifier ?
->>>>>>> d146514b3e4b6fa9b7c80f4ad4eda88d1ef20ef3
- *
  * Return: pointer or NULL
  */
+
 static int (*_specifiers(const char *format))(va_list)
 {
 	unsigned int a;
@@ -31,6 +28,12 @@ static int (*_specifiers(const char *format))(va_list)
 	}
 	return (p[a].z);
 }
+
+/**
+ * _printf - prints strings characteres etc
+ * @format: arguments ?
+ * Return: characters
+ */
 
 int _printf(const char *format, ...)
 {

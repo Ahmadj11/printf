@@ -11,15 +11,13 @@
  * @b: second parameter
  */
 
-/*prototypes */
-
-typedef struct printf 
+typedef struct printf
 {
-	int (*b) (va_list);
+	int (*b)(va_list);
 	char *a;
 }
 
-typedef struct printf 
+typedef struct printf
 
 
 int _printf(const char *format, ...)
