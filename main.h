@@ -7,8 +7,8 @@
 
 /**
 * struct print - makes the functions
-* @z: first parameter
-* @y: secnd parameter
+* @y: first parameter
+* @z: secnd parameter
 */
 
 typedef struct print
