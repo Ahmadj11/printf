@@ -1,32 +1,27 @@
 #ifndef MAIN_H
 #define MAIN_H
+
+#include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
-#include <unistd.h>
-#include <stdio.h>
 
 /**
- * struct print - fucntion being used
- * @a: first parameter
- * @b: second parameter
- */
+* struct print - makes the functions
+* @z: first parameter
+* @y: secnd parameter
+*/
 
-typedef struct printf
+typedef struct print
 {
-	int (*b)(va_list);
-	char *a;
-}
+	char *y;
+	int (*z)(va_list);
+} print_x;
 
-typedef struct printf
-
-
-int _printf(const char *format, ...)
-
+int _printf(const char *format, ...);
+int _putchar(char c);
 int print_d(va_list);
 int print_c(va_list);
-int print_i(va_list);
 int print_s(va_list);
-int _putchar(char c);
-int _printf(const char *format, ...);
+int print_i(va_list);
 
 #endif /* MAIN_H */

@@ -1,11 +1,11 @@
-#include <unistd.h>
 #include "main.h"
+#include <unistd.h>
 
 /**
- * _putchar - function that prints characters
- * @c: The character
- * Return: Always 0
- */
+* _putchar - prints char
+* @c: char
+* Return: Always 0
+*/
 
 int _putchar(char c)
 {
