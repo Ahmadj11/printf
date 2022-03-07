@@ -2,16 +2,14 @@
 
 /**
  * _specifiers - checks format specifier
- * @format: format specifier being used
- * _specifiers - funtion being used
- * @format: specifier ?
- * Return: pointer or NULL
+ * @format: format specifier being
+ *
+ * Return: pointer to valid function or NULL
  */
-
 static int (*_specifiers(const char *format))(va_list)
 {
-	unsigned int a;
-	print_a p[] = {
+	unsigned int x;
+	print_x p[] = {
 		{"c", print_c},
 		{"s", print_s},
 		{"i", print_i},
@@ -19,55 +17,55 @@ static int (*_specifiers(const char *format))(va_list)
 		{NULL, NULL}
 	};
 
-	for (a = 0; p[a].y != NULL; a++)
+	for (x = 0; p[x].y != NULL; x++)
 	{
-		if (*(p[a].y) == *format)
+		if (*(p[x].y) == *format)
 		{
 			break;
 		}
 	}
-	return (p[a].z);
+	return (p[x].z);
 }
 
 /**
- * _printf - prints strings characteres etc
- * @format: arguments ?
- * Return: characters
+ * _printf - prints everything
+ * @format: list of argument types passed
+ *
+ * Return: number of characters
  */
-
 int _printf(const char *format, ...)
 {
-	unsigned int a = 0, count = 0;
+	unsigned int x = 0, count = 0;
 	va_list valist;
 	int (*f)(va_list);
 
 	if (format == NULL)
 		return (-1);
 	va_start(valist, format);
-	while (format[a])
+	while (format[x])
 	{
-		for (; format[a] != '%' && format[a]; a++)
+		for (; format[x] != '%' && format[x]; x++)
 		{
-			_putchar(format[a]);
+			_putchar(format[x]);
 			count++;
 		}
-		if (!format[a])
+		if (!format[x])
 			return (count);
-		f = _specifiers(&format[a + 1]);
+		f = _specifiers(&format[x + 1]);
 		if (f != NULL)
 		{
 			count += f(valist);
-			a += 2;
+			x += 2;
 			continue;
 		}
-		if (!format[a + 1])
+		if (!format[x + 1])
 			return (-1);
-		_putchar(format[a]);
+		_putchar(format[x]);
 		count++;
-		if (format[a + 1] == '%')
-			a += 2;
+		if (format[x + 1] == '%')
+			x += 2;
 		else
-			a++;
+			x++;
 	}
 	va_end(valist);
 	return (count);
